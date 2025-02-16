@@ -6,7 +6,7 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 18:14:43 by alicja            #+#    #+#             */
-/*   Updated: 2025/02/11 11:49:18 by alicja           ###   ########.fr       */
+/*   Updated: 2025/02/16 14:28:28 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ Account::Account(int initial_deposit)
     _nbAccounts++;
     _accountIndex = _nbAccounts - 1;
     _amount = initial_deposit;
+    _nbDeposits = 0;
+    _nbWithdrawals = 0;
     _totalAmount += _amount;
     _displayTimestamp();
     std::cout << "index:" << _accountIndex
