@@ -1,2 +1,2 @@
-# C-modules
+# Cpp-modules
 The purpose of this modules is the introduction to the OOP.
