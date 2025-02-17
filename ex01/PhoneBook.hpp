@@ -6,7 +6,7 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 18:12:34 by alicja            #+#    #+#             */
-/*   Updated: 2025/02/06 14:41:57 by alicja           ###   ########.fr       */
+/*   Updated: 2025/02/17 17:26:10 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,20 @@
 class PhoneBook
 {
     private:
-        int counter;
+        Contact m_contacts[8];
 
     public:
-        Contact m_contacts[8];
         PhoneBook();
         ~PhoneBook();
 
-        void out(void);
-        void get_new_contact(Contact *book, int i);
-        void search_contact(Contact *book, int counter);
+        void exit(void);
+        void get_new_contact(int i); 
+        void search_contact(int counter);
+        int selectContact(int counter);
+
+        // Getter i setter dla pojedynczego kontaktu
+        Contact &getContact(int index);
+        void setContact(int index, const Contact &contact);
 };
 
 #endif

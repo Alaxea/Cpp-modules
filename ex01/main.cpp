@@ -6,7 +6,7 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 18:12:01 by alicja            #+#    #+#             */
-/*   Updated: 2025/02/08 19:33:47 by alicja           ###   ########.fr       */
+/*   Updated: 2025/02/17 17:12:15 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int main(void)
 {
-    PhoneBook book;
     PhoneBook phoneBook;
     std::string input;
     int i = 0;
@@ -36,19 +35,17 @@ int main(void)
                 std::cout << "Error: Phonebook is full." << std::endl;
                 i = 0;
             }
-            phoneBook.get_new_contact(book.m_contacts, i);
+            phoneBook.get_new_contact(i);
             i++;
-            counter++;
+            if (counter < 8)
+                counter++;
         }
         else if (input == "SEARCH")
         {
-            if (counter > 8)
-                phoneBook.search_contact(book.m_contacts, 8);
-            else
-                phoneBook.search_contact(book.m_contacts, i);
+            phoneBook.search_contact(counter);
         }
         else if (input == "EXIT")
-            phoneBook.out();
+            phoneBook.exit();
         else
             std::cout << "Error: Invalid command." << std::endl;
     }
