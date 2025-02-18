@@ -6,18 +6,11 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 18:14:43 by alicja            #+#    #+#             */
-/*   Updated: 2025/02/16 14:28:28 by alicja           ###   ########.fr       */
+/*   Updated: 2025/02/18 14:40:18 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
-/*"index" – Numer identyfikacyjny konta lub pozycji.
-"amount" – Stan konta w danym momencie (kwota).
-"deposits" – Liczba depozytów (wpłat).
-"withdrawals" – Liczba wypłat.
-"p_amount" – Kwota wycofana (np. kwota próby wypłaty).
-"withdrawal" – Informacja o wykonaniu lub odmowie wypłaty.
-"nb_withdrawals" – Liczba wypłat (jeśli występuje).*/
 
 //setters
 int Account::_nbAccounts = 0;
@@ -139,7 +132,7 @@ void Account::_displayTimestamp(void)
                 << std::localtime(&time)->tm_year + 1900
                 << std::setw(2)
                 << std::setfill('0')
-                << std::localtime(&time)->tm_mon
+                << std::localtime(&time)->tm_mon + 1
                 << std::setw(2)
                 << std::localtime(&time)->tm_mday
                 << "_"
