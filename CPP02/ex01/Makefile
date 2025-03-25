@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: alicja <alicja@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/10 18:14:27 by alicja            #+#    #+#              #
-#    Updated: 2025/02/16 13:40:26 by alicja           ###   ########.fr        #
+#    Created: 2025/03/22 12:11:29 by alicja            #+#    #+#              #
+#    Updated: 2025/03/22 12:11:41 by alicja           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-NAME = account
-SRC = Account.cpp tests.cpp
+NAME = Fix
+SRC = main.cpp Fixed.cpp
 OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 $(NAME): $(OBJ)
@@ -26,5 +26,3 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 re: fclean $(NAME)
-
-.PHONY: all clean fclean re 

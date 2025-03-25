@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: alicja <alicja@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/10 17:19:20 by alicja            #+#    #+#              #
-#    Updated: 2025/01/10 17:39:29 by alicja           ###   ########.fr        #
+#    Created: 2025/03/18 19:36:29 by alicja            #+#    #+#              #
+#    Updated: 2025/03/18 19:36:57 by alicja           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-NAME = megaphone
-SRC = megaphone.cpp
+NAME = sed
+SRC = main.cpp Sed.cpp
 OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 $(NAME): $(OBJ)
@@ -26,5 +26,3 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 re: fclean $(NAME)
-
-.PHONY: all clean fclean re 
