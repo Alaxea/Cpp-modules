@@ -6,7 +6,7 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 20:50:06 by alicja            #+#    #+#             */
-/*   Updated: 2025/03/30 17:08:16 by alicja           ###   ########.fr       */
+/*   Updated: 2025/03/30 18:03:52 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ DiamondTrap::DiamondTrap(const DiamondTrap &diamondtrap): ClapTrap("_clap_name")
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &diamondtrap)
 {
     std::cout << "DiamondTrap: Copy assigment operator called" << std::endl;
-    this->name = diamondtrap.name;
+    if (this != &diamondtrap)
+    {
+        this->name = diamondtrap.name;   
+    }
     return (*this);
 }
 

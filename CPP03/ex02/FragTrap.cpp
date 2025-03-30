@@ -6,7 +6,7 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 20:17:39 by alicja            #+#    #+#             */
-/*   Updated: 2025/03/30 17:01:18 by alicja           ###   ########.fr       */
+/*   Updated: 2025/03/30 18:02:59 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,13 @@ FragTrap::FragTrap(const FragTrap &fragtrap): ClapTrap("")
 FragTrap &FragTrap::operator=(const FragTrap &fragtrap)
 {
     std::cout << "FragTrap: Copy assigment operator called" << std::endl;
-    this->m_name = fragtrap.m_name;
-    this->m_hitPoints = fragtrap.m_hitPoints;
-    this->m_energyPoints = fragtrap.m_energyPoints;
-    this->m_attackDamage = fragtrap.m_attackDamage;
+    if (this != &fragtrap)
+    {
+        this->m_name = fragtrap.m_name;
+        this->m_hitPoints = fragtrap.m_hitPoints;
+        this->m_energyPoints = fragtrap.m_energyPoints;
+        this->m_attackDamage = fragtrap.m_attackDamage;
+    }
     return (*this);
 
 }

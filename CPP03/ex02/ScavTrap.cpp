@@ -6,7 +6,7 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 17:23:34 by alicja            #+#    #+#             */
-/*   Updated: 2025/03/30 16:47:18 by alicja           ###   ########.fr       */
+/*   Updated: 2025/03/30 18:02:20 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,13 @@ ScavTrap::ScavTrap(const ScavTrap &scavtrap): ClapTrap(scavtrap)
 ScavTrap &ScavTrap::operator=(const ScavTrap &scavtrap)
 {
     std::cout << "ScavTrap: Copy assigment operator called" << std::endl;
-    this->m_name = scavtrap.m_name;
-    this->m_hitPoints = scavtrap.m_hitPoints;
-    this->m_energyPoints = scavtrap.m_energyPoints;
-    this->m_attackDamage = scavtrap.m_attackDamage;
+    if (this != &scavtrap)
+    {
+        this->m_name = scavtrap.m_name;
+        this->m_hitPoints = scavtrap.m_hitPoints;
+        this->m_energyPoints = scavtrap.m_energyPoints;
+        this->m_attackDamage = scavtrap.m_attackDamage;   
+    }
     return (*this);
 }
 

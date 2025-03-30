@@ -6,7 +6,7 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 17:03:16 by alicja            #+#    #+#             */
-/*   Updated: 2025/03/30 16:59:31 by alicja           ###   ########.fr       */
+/*   Updated: 2025/03/30 18:01:52 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,13 @@ ClapTrap::ClapTrap(const ClapTrap &claptrap)
 ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap)
 {
     std::cout << "ClapTrap: Copy assigment operator called" << std::endl;
-    this->m_name = claptrap.m_name;
-    this->m_hitPoints = claptrap.m_hitPoints;
-    this->m_energyPoints = claptrap.m_energyPoints;
-    this->m_attackDamage = claptrap.m_attackDamage;
+    if (this != &claptrap)
+    {
+        this->m_name = claptrap.m_name;
+        this->m_hitPoints = claptrap.m_hitPoints;
+        this->m_energyPoints = claptrap.m_energyPoints;
+        this->m_attackDamage = claptrap.m_attackDamage;
+    }
     return (*this);
 }
 ClapTrap::~ClapTrap()
