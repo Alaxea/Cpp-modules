@@ -6,11 +6,11 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 21:07:31 by alicja            #+#    #+#             */
-/*   Updated: 2025/03/30 22:14:22 by alicja           ###   ########.fr       */
+/*   Updated: 2025/03/30 22:24:48 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Animal.hpp"
+#include "../includes/AAnimal.hpp"
 #include "../includes/Cat.hpp"
 #include "../includes/Dog.hpp"
 #include "../includes/WrongCat.hpp"
@@ -20,12 +20,12 @@
 
 int main()
 {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const AAnimal* j = new Dog();
+    const AAnimal* i = new Cat();
     delete j; //should not create a leak
     delete i;
     
-    const Animal* animals[4] = {new Dog(), new Dog(), new Cat(), new Cat()};
+    const AAnimal* animals[4] = {new Dog(), new Dog(), new Cat(), new Cat()};
     for (int i = 0; i < 4; i++)
         delete animals[i];
     return 0;
