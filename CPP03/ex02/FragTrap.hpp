@@ -6,7 +6,7 @@
 /*   By: alicja <alicja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 20:17:43 by alicja            #+#    #+#             */
-/*   Updated: 2025/03/29 20:41:30 by alicja           ###   ########.fr       */
+/*   Updated: 2025/03/30 17:03:35 by alicja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,11 @@
 
 class FragTrap: public ClapTrap
 {
-    private:
-
     public:
         FragTrap(std::string name);
         FragTrap(const FragTrap &fragtrap);
         FragTrap &operator=(const FragTrap &fragtrap);
         ~FragTrap();
-        void attack(const std::string& target);
         void highFivesGuys(void);
 
 };
